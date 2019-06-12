@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Logica de Programação Javascript</title>
+	
+</head>
+<body>
+	<h1>Lógica de programação com Javascript</h1>
+	<script>
+
+		function teste1(){
+			console.log('*teste1 chamado')
+		}
+
+		function teste2(p){
+			console.log('*teste2 chamado recebendo p', p)
+		}
+
+		function executa(cb){
+			console.log('*executa chamado');
+			if(typeof cb === 'function'){
+				cb('"parametro de callback"')
+			}
+		}
+
+		// executa();
+		executa(teste1);
+
+		executa(function(x){
+			console.log('*função anonima', x)
+		})
+
+	</script>
+	
+</body>
+</html>

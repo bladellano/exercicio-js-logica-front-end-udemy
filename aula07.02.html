@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Logica de Programação Javascript</title>
+
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <div id="output"></div>
+    <script>
+        var msg = "";
+
+        var daniel = {
+            nome: 'daniel',
+            sobrenome: 'tapias morales',
+            rg: '111.222.333',
+            tel: '2323-2323',
+            fn: function() {
+                console.log('Oi')
+            }
+        }
+
+        //for in: somente para objetos
+        for (propriedade in daniel) {
+            // console.log(propriedade)
+            console.log(propriedade, ":", daniel[propriedade]) //daniel.nome
+
+        }
+
+        document.querySelector('#output').innerHTML = msg;
+
+    </script>
+</body>
+
+</html>

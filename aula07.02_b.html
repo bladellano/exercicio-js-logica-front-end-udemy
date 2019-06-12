@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Logica de Programação Javascript</title>	
+</head>
+<body>
+	<h1>Lógica de programação com Javascript</h1>
+
+	<script>
+
+	//sintaxe formal
+	var obj = new Object();
+
+	obj.nome = "meu objeto";
+	obj.funcao = function(){
+		console.log("Eu sou um método");
+	}
+
+	console.log(obj.nome);
+	obj.funcao();
+
+	//sintaxe literal 
+	
+	var obj2 = {
+		nome:"meu objeto 2",
+		funcao: function(){
+			console.log("Eu sou o metodo do obj2")
+		}
+	}
+	console.log("=-=-=-=-=-=-=-=-=-=-=-=-")
+	console.log(obj2.nome)
+	obj2.funcao()
+
+	//Objetos customizados
+	
+	var endereco1 = {
+		"Logradouro":"rua tal",
+		"numero": 2
+	}
+
+	var endereco2 = {
+		"Logradouro":"rua aquela",
+		"numero": 20
+	}
+
+	var endereco3 = {
+		"Logradouro":"rua essa",
+		"numero": 10
+	}
+
+	var minhaArray = new Array()
+	var hoje = new Date()
+	var objs = new Object()
+
+	//funcoes que iniciam com letras maiuscula, são funções construtora (Classes)
+	function Endereco(log, n, cep){
+		this.logradouro = log
+		this.n = n,
+		this.cep = cep
+
+		this.enderecoCompleto = function (){
+			return this.logradouro + ', ' + this.n + ' - ' + this.cep;
+		}
+	}
+
+	var endereco1 = new Endereco("Rua Dois de Junho",1,"67033-160") // criado o obj ou instancia de um obj.
+	var endereco2 = new Endereco("Augusto Montenegro, KM10",202, "68021-010") // criado o obj
+
+	console.log('Endereço completo:',endereco1.enderecoCompleto());
+
+	</script>
+</body>
+</html>

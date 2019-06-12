@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Logica de Programação Javascript</title>	
+</head>
+<body>
+	<h1>Lógica de programação com Javascript</h1>
+
+	<div id="output"></div>
+
+</body>
+<script>
+	//matriz
+	/*var alunos = [
+	{nome:'daniel', id:112233, endereco: 'rua faz de conta 2, ap 2, são paulo SP'},
+	{nome:'josé', id:112233, endereco: 'rua belezura 5, São Paulo'},
+	{nome:'joão', id:883322, endereco: 'rua belezura 20, São Paulo - perto do josé'},
+	{nome:'maria', id:445522, endereco: 'rua chuchu 1, RJ'},
+	{nome:'ana', id:332211, endereco: 'Av belezura 41, SP'}
+	]*/
+
+	function Endereco(dados){
+
+		this.logradouro = dados.logradouro || '';
+		this.n = dados.n || 0;
+		this.comp = dados.comp;
+		this.cidade = dados.cidade;
+		this.uf = dados.uf;
+		this.cep = dados.cep;
+	}
+	var alunos = [
+	{nome:'daniel', id:112233, endereco: new Endereco({logradouro:'Rua Santa Catarina', n:327, comp:'Apartamento', cidade:'Vila Velha', uf:'ES', cep:'29129-215'})},
+	{nome:'josé', id:112233, endereco: new Endereco({logradouro:'Rua Irmã Maria Francisca Michel', n:776, comp:null, cidade:'Curitiba', uf:'PR', cep:'81850-390'})},
+	{nome:'joão', id:883322, endereco: new Endereco({logradouro:'Rua Maria Jovita da Conceição', n:967, comp:null, cidade:'São Paulo', uf:'SP', cep:'03809-150'})},
+	{nome:'maria', id:445522, endereco: new Endereco({logradouro:'Rua Carlos Roberto Chagas', n:898, comp:null, cidade:'Maceió', uf:'AL', cep:'57081-750'})},
+	{nome:'ana', id:332211, endereco: new Endereco({logradouro:'Travessa Argemiro Ribeiro Macedo', n:231, comp:null, cidade:'Vila Velha', uf:'ES', cep:'29114-773'})}
+	]
+
+
+	var msg = "";
+
+	document.querySelector('#output').innerHTML = msg;
+
+</script>
+</html>
