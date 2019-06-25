@@ -9,7 +9,6 @@
         body {
             font-family: sans-serif;
         }
-
     </style>
 </head>
 
@@ -32,12 +31,24 @@
             nJogador = document.querySelector('#meuNumero').value;
             nComputador = sortear(5);
 
-            console.log('nComputador', nComputador);
-            console.log('nJogador', nJogador);
+            if (!nJogador) {
+                alert('Primeiro digite um número')
+            }
+            nJogador = parseInt(nJogador);
+            var total = nJogador + nComputador;
+            var resultado = (total % 2 === 0) ? 'pa' : 'impar';
+            verificarResultado(resultado);
 
         }
 
+        function verificarResultado(resultado) {
+            if (minhaEscolha == resultado) {
+                alert('Eu ganhei')
+            } else {
+                alert('O computador ganhou');
+            }
+            console.log('nComputador', nComputador);
+            console.log('nJogador', nJogador);
+        }
     </script>
-</body>
-
-</html>
+</body></html>
